@@ -24,11 +24,10 @@ const spaceCraftSelector = (spaceCraft) => {
 
 // Functionality to randomly select a spacecraft company;
 const spaceCompanySelector = (spaceCompanyArr) => {
-    let spaceCompany;
-    
-    spaceCompanyArr.forEach((company) => {
-        spaceCompany = company;
-    });
-    return spaceCompany;
+    let company;
+    for(let i = 0; i < spaceCompanyArr.length; i++){
+        company = spaceCompanyArr[Math.floor(Math.random() * i)];
+    }
+    return company;
 }
 
