@@ -13,9 +13,19 @@ const planetSelector = (planetsArr) => {
     return planet;
 }
 
+// Functionality to randomly select a spacecraft
+const spaceCraftSelector = (spaceCraft) => {
+    let spaceShip;
+    for(let i = 0; i < spaceCraft.length; i++){
+        spaceShip = spaceCraft[Math.floor(Math.random() * i)];
+    }
+    return spaceShip;
+}
+
 // Functionality to randomly select a spacecraft company;
 const spaceCompanySelector = (spaceCompanyArr) => {
     let spaceCompany;
+    
     spaceCompanyArr.forEach((company) => {
         spaceCompany = company;
     });
